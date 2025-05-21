@@ -1,9 +1,16 @@
 const express = require('express');
-const router = express.Router(); // роутер
-const {registerUser, loginUser} = require('../controllers/authController'); //контроллеры авторизации
-  
+const router = express.Router();
 
-router.post('/register', registerUser); // роутер регистраций 
-router.post('/login', loginUser); // роутер авторизаций
+// Пример маршрута для логина
+router.post('/login', (req, res) => {
+  // Логика аутентификации (заглушка)
+  res.json({ message: 'Успешный вход в систему' });
+});
 
-module.express = router; // экспортируем роутер
+// Пример маршрута для регистрации
+router.post('/register', (req, res) => {
+  // Логика регистрации пользователя (заглушка)
+  res.json({ message: 'Пользователь зарегистрирован' });
+});
+
+module.exports = router;
